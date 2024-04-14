@@ -1,3 +1,3 @@
-module github.com/Logan-Garrett/FileCombiner
+module FileCombiner
 
 go 1.22.0

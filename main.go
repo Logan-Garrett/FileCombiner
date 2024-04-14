@@ -1,9 +1,9 @@
 package main
 
 import (
-	"os"
+	// "os"
 	"fmt"
-	FileVerify "github.com/Logan-Garrett/FileCombiner/FileFunctions/file_funcs.go"
+	FileVerify "FileCombiner/file_funcs"
 	// "strings"
 )
 
@@ -22,11 +22,12 @@ func main() {
 		}
 		fmt.Scanln(&input)
 		if FileVerify.IsFile(input) == false {
-			continue
+			fmt.Println("File not Found!")
+			fmt.Print(":> ")
 		} else {
         	files = append(files, input)
+         	fmt.Print(":> ")
 		}
-        fmt.Print(":> ")
 	}
 
 	fmt.Println(files)

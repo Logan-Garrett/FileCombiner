@@ -2,14 +2,14 @@ package file_funcs
 
 import (
 	"os"
+	// "fmt"
 )
 
 func IsFile(input string) bool {
 	_, err := os.Stat(input)
-	if os.IsNotExist(err) && input != "exit" {
-        fmt.Println("File not Found !!")
+	if input == "exit" || os.IsNotExist(err) {
         return false
+    } else {
+    	return true
     }
-
-	return true
 }
